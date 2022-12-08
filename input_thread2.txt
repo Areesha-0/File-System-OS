@@ -1,0 +1,12 @@
+make_dir dir2
+create_file file1
+open_file file1 w
+write_to_file file1 hello
+create_file file2
+open_file file2 w
+memory_map
+write_to_file file2 98765
+write_to_file file1 bye!
+close_file file1
+close_file file2
+memory_map

@@ -34,9 +34,9 @@ class Memory:
                 if i == num_blocks: break
                     
         if not bool(blocks):
-            print("Memory is full, no more blocks found!")
+            # print("Memory is full, no more blocks found!")
             return None
-                
+
         return blocks
     
     
@@ -65,8 +65,10 @@ class Memory:
                 block.fsize=0
                 
     def memory_map(self):
+        map = "Memory Map:\n"
         for block, data in self.memory.items():
-            print(f"{block.name}: File: {block.f_name} of size {block.fsize}")
+            map += f"{block.name}: {block.f_name} of size {block.fsize}\n"
+        return map
 
     def memory_to_json(self):
         mem = self.memory

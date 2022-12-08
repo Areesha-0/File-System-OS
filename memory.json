@@ -5,43 +5,43 @@
       "is_full": 0,
       "f_name": "file1",
       "size": 20,
-      "b_occupied": 17,
-      "fsize": 17
+      "b_occupied": 9,
+      "fsize": 9
     },
-    "hi how u helloooo"
+    "hellobye!"
   ],
   "block 2": [
     {
       "name": "block 2",
       "is_full": 0,
-      "f_name": "file1",
+      "f_name": "file2",
       "size": 20,
-      "b_occupied": 0,
-      "fsize": 17
+      "b_occupied": 5,
+      "fsize": 5
     },
-    null
+    "98765"
   ],
   "block 3": [
     {
       "name": "block 3",
       "is_full": 0,
-      "f_name": null,
+      "f_name": "file1",
       "size": 20,
-      "b_occupied": 0,
-      "fsize": 0
+      "b_occupied": 7,
+      "fsize": 7
     },
-    null
+    "abcdxyz"
   ],
   "block 4": [
     {
       "name": "block 4",
       "is_full": 0,
-      "f_name": null,
+      "f_name": "file2",
       "size": 20,
-      "b_occupied": 0,
-      "fsize": 0
+      "b_occupied": 3,
+      "fsize": 3
     },
-    null
+    "123"
   ],
   "block 5": [
     {

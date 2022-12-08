@@ -28,8 +28,7 @@ class Root():
                     file_dict[key] = value.__dict__
                     if value.mem_locations:
                         for i in range(len(value.mem_locations)):
-                            print('hello')
-                            print(value.mem_locations[i])
+                            # print(value.mem_locations[i])
                             # converting block objects to dict
                             value.mem_locations[i] = value.mem_locations[i].__dict__
             else:
@@ -64,9 +63,6 @@ class Directory():
         self.path = "Root/" + name
         self.name = name
         self.files_dict = dict()
-
-# directory should have a dictionary of file objects
-
 
 class File:
 
@@ -112,54 +108,53 @@ class File:
             blocks = {}
             txt_len = len(text)
 
-            # file doesnt exist in memory then just get num blocks from memory
-            if isin_mem == None or isin_mem.b_occupied == isin_mem.size:
+             #file doesnt exist in memory then just get num blocks from memory
+            if isin_mem == None or isin_mem.b_occupied == isin_mem.size :
                 space_req = self.num_blocks(txt_len, b_size)
-                blocks = mem_obj.get_block(space_req)  # get blocks from memory
+                blocks = mem_obj.get_block(space_req)  #get blocks from memory
 
                 if blocks != None:
                     txt_chunks = self.text_to_chunks(text, b_size)
 
                     for index, block in enumerate(blocks):
-                        b = mem_obj.write_to_block(
-                            block, txt_chunks[index], self.name)
+                        b = mem_obj.write_to_block(block,txt_chunks[index], self.name)
                         self.mem_locations.append(b)
 
-                        if len(txt_chunks) == index+1:
-                            break
-                else:
-                    print("Cannot write to file, no more space!")
+                        if len(txt_chunks) == index+1: break
+                else: 
+                    # print("Cannot write to file, no more space!")
+                    return "Cannot write to file, no more space!"
 
-            else:  # check how many to accomodate in last block
+            else: # check how many to accomodate in last block
                 remaining = txt_len - (isin_mem.size - isin_mem.b_occupied)
-                accomodated = txt_len - remaining  # block will accomodate
+                accomodated = txt_len - remaining # block will accomodate
 
-                b = mem_obj.write_to_block(
-                    isin_mem, mem_obj.memory[isin_mem]+text[:accomodated], self.name)
+                b = mem_obj.write_to_block(isin_mem,mem_obj.memory[isin_mem]+text[:accomodated] ,self.name)
 
-                if remaining != 0:
+                if remaining != 0 and remaining > 0:
                     # for remaining get num_blocks by reducing length of text
                     space_req = self.num_blocks(remaining, b_size)
                     blocks = mem_obj.get_block(space_req)
 
                     if blocks != None:
-                        txt_chunks = self.text_to_chunks(
-                            text[accomodated:], b_size)
+                        txt_chunks = self.text_to_chunks(text[accomodated:], b_size)
 
                         for index, block in enumerate(blocks):
-                            b = mem_obj.write_to_block(
-                                block, txt_chunks[index], self.name)
+                            b = mem_obj.write_to_block(block,txt_chunks[index], self.name)
                             self.mem_locations.append(b)
 
-                            if len(txt_chunks) == index+1:
-                                break
-                    else:
-                        print("Cannot write to file, no more space!")
+                            if len(txt_chunks) == index+1: break
+                    
+                        return "Written to file"
+                    else: 
+                        # print("Cannot write to file, no more space!")
+                        return "Cannot write to file, no more space!"
 
             self.update_fsize(mem_obj)
-
-        else:
-            print("File is not open in write mode!")
+            
+        else: 
+            # print("File is not open in write mode!")
+            return "File is not open in write mode!"
 
     def remove_mem(self):
         self.mem_locations.clear()
@@ -175,16 +170,21 @@ class File:
                 self.remove_mem()
                 self.write_to_file(data, mem_obj)
                 self.update_fsize(mem_obj)
+
+                return f"File was written at {write_at}"
         else:
-            print("File is not open in write mode!")
+            # print("File is not open in write mode!")
+            return "File is not open in write mode!"
 
     def read_file_from(self, start, size, mem_obj):
         if self.mode == 'r' and size <= self.size and size > 0:
             data = self.read_file(mem_obj)
 
-            print(f'data: {data[start:start+size]}')
+            # print(f'data: {data[start:start+size]}')
+            return f'data: {data[start:start+size]}'
         else:
-            print("Error! File is not open in read mode or size is invalid!")
+            # print("Error! File is not open in read mode or size is invalid!")
+            return "Error! File is not open in read mode or size is invalid!"
 
     def move_content(self, start_index, target_index, size, mem_obj):
         if self.mode == 'w':
@@ -203,8 +203,11 @@ class File:
             self.remove_mem()
             self.write_to_file(data, mem_obj)
 
+            return "File's content is moved!"
+
         else:
-            print("File is not open in write mode!")
+            # print("File is not open in write mode!")
+            return "File is not open in write mode!"
 
     def truncate_file(self, size, mem_obj):
         if self.mode == 'w':
@@ -213,7 +216,7 @@ class File:
             data = data[:size]
             mem_obj.deallocate_mem(self.name)
             self.remove_mem()
-            print(f"clear {self.mem_locations}")
+            # print(f"clear {self.mem_locations}")
             self.write_to_file(data, mem_obj)
             self.update_fsize(mem_obj)
 
@@ -221,9 +224,12 @@ class File:
                 mem_obj.deallocate_mem(self.name)
                 self.remove_mem()
                 self.update_fsize(mem_obj)
+            
+            return "File truncated sucessfully!"
 
         else:
-            print("File is not open in write mode!")
+            # print("File is not open in write mode!")
+            return "File is not open in write mode!"
 
     def update_fsize(self, mem_obj):
         self.size = len(self.read_file(mem_obj))
@@ -255,17 +261,21 @@ class File_Manager:
             parent = self.cwd.name
 
         else:
-            print("Directory cannot be created from this location")
+            # print("Directory cannot be created from this location")
+            return "Directory cannot be created from this location"
 
         if self.root_obj.tree.get_node(name) != None:
-            print('Directory already exists')
+            # print('Directory already exists')
+            return 'Directory already exists'
 
         else:
             dir_ = Directory(name)
             node = Node(dir_.name, dir_.name, data=dir_)
-            new_dir = self.root_obj.tree.add_node(
-                node, parent=parent)  # adding node to tree
+            new_dir = self.root_obj.tree.add_node(node, parent=parent)  # adding node to tree
             self.cwd = node.data  # pointing cwd to the directory formed
+            # print(f"Diretory created: {name}")
+            return f"Diretory created: {name}"
+
 
     def delete_dir(self, name):
         if hasattr(self.cwd, 'files_dict') == True:
@@ -273,28 +283,33 @@ class File_Manager:
                 # self.root_obj.tree.remove_node(self.cwd.files_dict[name].name)
                 self.root_obj.tree.remove_node(name)
                 del self.cwd.files_dict
+                # print(f"Diretory deleted: {name}")
+                return f"Diretory deleted: {name}"
             # else:
             #     print("Directory does not exist")
         else:
-            print("Directory cannot be deleted from this location")
+            # print("Directory cannot be deleted from this location")
+            return "Directory cannot be deleted from this location"
 
     def change_dir(self, goto_dir):
         if goto_dir == self.cwd.name:  # already in the current diectory
-            print("You are in the same directory")
+            # print("You are in the same directory")
+            return "You are in the same directory"
 
         elif goto_dir == "Root":  # root is also a directory
             self.cwd = self.root_obj
 
         else:
             self.cwd = self.root_obj
-            dir_node = self.cwd.tree.get_node(
-                goto_dir)  # get directory node from root
+            dir_node = self.cwd.tree.get_node(goto_dir)  # get directory node from root
 
             if dir_node == None:
-                print("This directory does not exist")
+                # print("This directory does not exist")
+                return "This directory does not exist"
             else:
                 self.cwd = dir_node.data  # set ptr to changed dir
-                print(f"You are now at {self.cwd.name}")
+                # print(f"You are now at {self.cwd.name}")
+                return f"You are now at {self.cwd.name}"
 
     def create_file(self, fname):
         if hasattr(self.cwd, 'files_dict') == True:  # if cwd points to a directory
@@ -304,11 +319,15 @@ class File_Manager:
                 # creating file inside dir's dictionary of files
                 dir_.files_dict.update({fname: File(fname)})
                 self.cwd = dir_
+                # print(f"File created: {fname}")
+                return f"File created: {fname}"
             else:
-                print('A file with this name already exists. Please choose another name')
+                # print('A file with this name already exists. Please choose another name')
+                return 'A file with this name already exists. Please choose another name'
 
         else:
-            print("Cannot create file from this location")
+            # print("Cannot create file from this location")
+            return "Cannot create file from this location"
 
     def delete_file(self, fname):
         if hasattr(self.cwd, 'files_dict') == True:  # if cwd points to a directory
@@ -317,16 +336,21 @@ class File_Manager:
             if fname in dir_.files_dict:  # file exists in that directory
                 # deleting file inside dir's dictionary of files
                 dir_.files_dict.pop(fname)
+                # print(f"File created: {fname}")
+                return f"File created: {fname}"
 
             else:
-                print("File does not exist in this directory")
+                # print("File does not exist in this directory")
+                return "File does not exist in this directory"
 
         else:
-            print("Cannot delete file from this location")
+            # print("Cannot delete file from this location")
+            return "Cannot delete file from this location"
 
     def move_file(self, src_dir, dest_dir, src_file):
         if src_dir == dest_dir:  # already in destination dir
-            print("File is in the same directory already")
+            # print("File is in the same directory already")
+            return "File is in the same directory already"
         else:
             self.change_dir(src_dir)  # go to source dir and cut the file obj
             file_obj = self.cwd.files_dict[src_file]  # save file obj
@@ -335,13 +359,17 @@ class File_Manager:
             self.change_dir(dest_dir)  # going to destination dir
             # adding file obj to that dir
             self.cwd.files_dict.update({src_file: file_obj})
+            # print(f"File moved from {src_dir} to {dest_dir}")
+            return f"File moved from {src_dir} to {dest_dir}"
 
     def open_file(self, fname, mode):
         self.cwd.files_dict[fname].mode = mode
-        return self.cwd.files_dict[fname]  # return file object t
+        # print(f"File opened: {fname} in {mode} mode")
+        return self.cwd.files_dict[fname], f"File opened: {fname} in {mode} mode"  # return file object t
 
     def close_file(self, fname):
-        print(f'You are at {self.cwd.name}. The file was closed!')
+        # print(f'You are at {self.cwd.name}. The file was closed!')
+        return f'You are at {self.cwd.name}. The file was closed!'
 
     def filesys_to_json(self):
         tree_dict = self.root_obj.to_dict_(with_data=True)
