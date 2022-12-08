@@ -2,13 +2,13 @@
   "Root": {
     "children": [
       {
-        "dir2": {
+        "dir1": {
           "children": [
             {
-              "dir1": {
+              "dir2": {
                 "data": {
-                  "path": "Root/dir1",
-                  "name": "dir1",
+                  "path": "Root/dir2",
+                  "name": "dir2",
                   "files_dict": {
                     "file1": {
                       "name": "file1",
@@ -18,11 +18,11 @@
                           "is_full": 0,
                           "f_name": "file1",
                           "size": 20,
-                          "b_occupied": 7,
-                          "fsize": 7
+                          "b_occupied": 9,
+                          "fsize": 9
                         }
                       ],
-                      "size": 7,
+                      "size": 9,
                       "mode": "w"
                     },
                     "file2": {
@@ -33,11 +33,11 @@
                           "is_full": 0,
                           "f_name": "file2",
                           "size": 20,
-                          "b_occupied": 3,
-                          "fsize": 3
+                          "b_occupied": 5,
+                          "fsize": 5
                         }
                       ],
-                      "size": 3,
+                      "size": 5,
                       "mode": "w"
                     }
                   }
@@ -46,8 +46,8 @@
             }
           ],
           "data": {
-            "path": "Root/dir2",
-            "name": "dir2",
+            "path": "Root/dir1",
+            "name": "dir1",
             "files_dict": {
               "file1": {
                 "name": "file1",
@@ -57,11 +57,11 @@
                     "is_full": 0,
                     "f_name": "file1",
                     "size": 20,
-                    "b_occupied": 9,
-                    "fsize": 9
+                    "b_occupied": 7,
+                    "fsize": 7
                   }
                 ],
-                "size": 9,
+                "size": 7,
                 "mode": "w"
               },
               "file2": {
@@ -72,11 +72,11 @@
                     "is_full": 0,
                     "f_name": "file2",
                     "size": 20,
-                    "b_occupied": 5,
-                    "fsize": 5
+                    "b_occupied": 3,
+                    "fsize": 3
                   }
                 ],
-                "size": 5,
+                "size": 3,
                 "mode": "w"
               }
             }

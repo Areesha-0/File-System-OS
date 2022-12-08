@@ -4,16 +4,26 @@ from treelib import Node, Tree
 import threading
 import time
 
+i_path= "inputs/"
+o_path= "outputs/"
 
 class User_Thread (threading.Thread):
     def __init__(self, threadID, name, file_mgr, mem_mgr):
         threading.Thread.__init__(self)
         self.threadID = threadID
         self.name = name
-        self.input_file = "input_thread"+str(self.threadID)+ ".txt"
+        self.input_file = "inputs/input_thread"+str(self.threadID)+ ".txt"
         self.file_mgr = file_mgr
         self.mem_mgr = mem_mgr
-        self.output_file = "output_thread"+str(self.threadID)+ ".txt"
+        self.output_file = "outputs/output_thread"+str(self.threadID)+ ".txt"
+
+    #function fetches commands from input files for each thread
+    def thread_parser(self, input_file):
+        with open(input_file, 'r') as fd:
+            commands = fd.readlines()
+            commands = [command.strip() for command in commands]
+        return commands
+
 
     def run(self):
         print(f"Executing {self.name}")
@@ -127,11 +137,3 @@ class User_Thread (threading.Thread):
                 fd.write(f"\n{output} -> {time.ctime(time.time())}\n")
 
         fd.close()
-
-
-    def thread_parser(self, file):
-        commands = []
-        with open(file) as file:
-            commands = [commands.rstrip() for commands in file]
-            file.close()
-            return commands
