@@ -1,0 +1,46 @@
+{
+  "Root": {
+    "children": [
+      {
+        "dir1": {
+          "data": {
+            "path": "Root/dir1",
+            "name": "dir1",
+            "files_dict": {
+              "file1": {
+                "name": "file1",
+                "mem_locations": [
+                  {
+                    "name": "block 1",
+                    "is_full": 0,
+                    "f_name": "file1",
+                    "size": 20,
+                    "b_occupied": 17,
+                    "fsize": 17
+                  },
+                  {
+                    "name": "block 2",
+                    "is_full": 0,
+                    "f_name": "file1",
+                    "size": 20,
+                    "b_occupied": 0,
+                    "fsize": 17
+                  }
+                ],
+                "size": 17,
+                "mode": "w"
+              },
+              "file2": {
+                "name": "file2",
+                "mem_locations": [],
+                "size": 0,
+                "mode": "r"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "data": null
+  }
+}
