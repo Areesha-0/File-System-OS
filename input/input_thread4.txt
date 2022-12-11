@@ -1,0 +1,12 @@
+make_dir dir_4
+create_file file_thread4
+open_file file_thread4 w
+write_to_file file_thread4 Gutten Morgen
+create_file file_thread4_2
+open_file file_thread4_2 w
+memory_map
+write_to_file file_thread4_2 24680
+write_to_file file_thread4 gut nacht
+close_file file_thread4
+close_file file_thread4_2
+memory_map

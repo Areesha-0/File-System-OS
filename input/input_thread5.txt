@@ -1,0 +1,12 @@
+make_dir dir_5
+create_file file_thread5
+open_file file_thread5 w
+write_to_file file_thread5 It is
+create_file file_thread5_2
+open_file file_thread5_2 w
+memory_map
+write_to_file file_thread5_2 36925
+write_to_file file_thread5 ovaridah
+close_file file_thread5
+close_file file_thread5_2
+memory_map

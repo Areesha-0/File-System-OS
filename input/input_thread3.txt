@@ -1,0 +1,12 @@
+make_dir dir_3
+create_file file_thread3
+open_file file_thread3 w
+write_to_file file_thread3 Hola como estas
+create_file file_thread3_2
+open_file file_thread3_2 w
+memory_map
+write_to_file file_thread3_2 13579
+write_to_file file_thread3 ciao!
+close_file file_thread3
+close_file file_thread3_2
+memory_map

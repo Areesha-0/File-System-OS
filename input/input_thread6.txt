@@ -1,0 +1,12 @@
+make_dir dir_6
+create_file file_thread6
+open_file file_thread6 w
+write_to_file file_thread6 Zhong huo wo zhen xai yo
+create_file file_thread6_2
+open_file file_thread6_2 w
+memory_map
+write_to_file file_thread6_2 48260
+write_to_file file_thread6 bing chilling
+close_file file_thread6
+close_file file_thread6_2
+memory_map
