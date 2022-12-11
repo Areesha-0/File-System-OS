@@ -1,138 +1,46 @@
 
-Diretory created: dir_3 -> Sun Dec 11 19:23:31 2022
+Diretory created: dir_3 -> Sun Dec 11 23:30:10 2022
 
-File created: file_thread3 -> Sun Dec 11 19:23:31 2022
+File created: file_thread3 -> Sun Dec 11 23:30:10 2022
 
-File opened: file_thread3 in w mode -> Sun Dec 11 19:23:31 2022
+File opened: file_thread3 in w mode -> Sun Dec 11 23:30:10 2022
 
-file_thread3 was written -> Sun Dec 11 19:23:31 2022
+file_thread3 was written -> Sun Dec 11 23:30:10 2022
 
-File created: file_thread3_2 -> Sun Dec 11 19:23:31 2022
+File created: file_thread3_2 -> Sun Dec 11 23:30:10 2022
 
-File opened: file_thread3_2 in w mode -> Sun Dec 11 19:23:31 2022
-
-Memory Map:
-block 1: file1 of size 7
-block 2: file2 of size 3
-block 3: file1 of size 9
-block 4: file2 of size 5
-block 5: file_thread4 of size 13
-block 6: file_thread4_2 of size 5
-block 7: file_thread4 of size 0
-block 8: file_thread5 of size 13
-block 9: file_thread5_2 of size 5
-block 10: file_thread3 of size 15
- -> Sun Dec 11 19:23:31 2022
-
-Cannot write to file, no more space! -> Sun Dec 11 19:23:31 2022
-
-file_thread3 was written -> Sun Dec 11 19:23:31 2022
-
-You are at dir_3. The file was closed! -> Sun Dec 11 19:23:31 2022
-
-No file open -> Sun Dec 11 19:23:31 2022
+File opened: file_thread3_2 in w mode -> Sun Dec 11 23:30:10 2022
 
 Memory Map:
 block 1: file1 of size 7
 block 2: file2 of size 3
 block 3: file1 of size 9
 block 4: file2 of size 5
-block 5: file_thread4 of size 13
-block 6: file_thread4_2 of size 5
-block 7: file_thread4 of size 0
-block 8: file_thread5 of size 13
-block 9: file_thread5_2 of size 5
-block 10: file_thread3 of size 20
- -> Sun Dec 11 19:23:31 2022
-
-Diretory created: dir_3 -> Sun Dec 11 19:23:54 2022
-
-File created: file_thread3 -> Sun Dec 11 19:23:54 2022
-
-File opened: file_thread3 in w mode -> Sun Dec 11 19:23:54 2022
-
-file_thread3 was written -> Sun Dec 11 19:23:54 2022
-
-File created: file_thread3_2 -> Sun Dec 11 19:23:54 2022
-
-File opened: file_thread3_2 in w mode -> Sun Dec 11 19:23:54 2022
-
-Memory Map:
-block 1: file1 of size 7
-block 2: file2 of size 3
-block 3: file1 of size 9
-block 4: file2 of size 5
-block 5: file_thread4 of size 13
-block 6: file_thread4_2 of size 5
-block 7: file_thread4 of size 0
-block 8: file_thread3 of size 15
-block 9: None of size 0
-block 10: None of size 0
- -> Sun Dec 11 19:23:54 2022
-
-file_thread3_2 was written -> Sun Dec 11 19:23:54 2022
-
-file_thread3 was written -> Sun Dec 11 19:23:54 2022
-
-You are at dir_3. The file was closed! -> Sun Dec 11 19:23:54 2022
-
-No file open -> Sun Dec 11 19:23:54 2022
-
-Memory Map:
-block 1: file1 of size 7
-block 2: file2 of size 3
-block 3: file1 of size 9
-block 4: file2 of size 5
-block 5: file_thread4 of size 13
-block 6: file_thread4_2 of size 5
-block 7: file_thread4 of size 0
-block 8: file_thread3 of size 20
-block 9: file_thread3_2 of size 5
-block 10: None of size 0
- -> Sun Dec 11 19:23:54 2022
-
-Diretory created: dir_3 -> Sun Dec 11 20:08:29 2022
-
-File created: file_thread3 -> Sun Dec 11 20:08:29 2022
-
-File opened: file_thread3 in w mode -> Sun Dec 11 20:08:29 2022
-
-file_thread3 was written -> Sun Dec 11 20:08:29 2022
-
-File created: file_thread3_2 -> Sun Dec 11 20:08:29 2022
-
-File opened: file_thread3_2 in w mode -> Sun Dec 11 20:08:29 2022
-
-Memory Map:
-block 1: file_thread3 of size 15
-block 2: None of size 0
-block 3: None of size 0
-block 4: None of size 0
-block 5: None of size 0
+block 5: file_thread3 of size 15
 block 6: None of size 0
 block 7: None of size 0
 block 8: None of size 0
 block 9: None of size 0
 block 10: None of size 0
- -> Sun Dec 11 20:08:29 2022
+ -> Sun Dec 11 23:30:10 2022
 
-file_thread3_2 was written -> Sun Dec 11 20:08:29 2022
+file_thread3_2 was written -> Sun Dec 11 23:30:10 2022
 
-file_thread3 was written -> Sun Dec 11 20:08:29 2022
+file_thread3 was written -> Sun Dec 11 23:30:10 2022
 
-You are at dir_3. The file was closed! -> Sun Dec 11 20:08:29 2022
+You are at dir_3. The file was closed! -> Sun Dec 11 23:30:10 2022
 
-No file open -> Sun Dec 11 20:08:29 2022
+No file open -> Sun Dec 11 23:30:10 2022
 
 Memory Map:
-block 1: file_thread3 of size 20
-block 2: file_thread3_2 of size 5
-block 3: None of size 0
-block 4: None of size 0
-block 5: None of size 0
-block 6: None of size 0
+block 1: file1 of size 7
+block 2: file2 of size 3
+block 3: file1 of size 9
+block 4: file2 of size 5
+block 5: file_thread3 of size 20
+block 6: file_thread3_2 of size 5
 block 7: None of size 0
 block 8: None of size 0
 block 9: None of size 0
 block 10: None of size 0
- -> Sun Dec 11 20:08:29 2022
+ -> Sun Dec 11 23:30:10 2022

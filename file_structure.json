@@ -2,34 +2,34 @@
   "Root": {
     "children": [
       {
-        "dir_3": {
+        "dir1": {
           "children": [
             {
-              "dir1": {
+              "dir2": {
                 "children": [
                   {
-                    "dir_4": {
+                    "dir_3": {
                       "children": [
                         {
-                          "dir_5": {
+                          "dir_6": {
                             "children": [
                               {
-                                "dir_6": {
+                                "dir_4": {
                                   "children": [
                                     {
-                                      "dir2": {
+                                      "dir_5": {
                                         "data": {
-                                          "path": "Root/dir2",
-                                          "name": "dir2",
+                                          "path": "Root/dir_5",
+                                          "name": "dir_5",
                                           "files_dict": {
-                                            "file1": {
-                                              "name": "file1",
+                                            "file_thread5": {
+                                              "name": "file_thread5",
                                               "mem_locations": [],
                                               "size": 0,
                                               "mode": "w"
                                             },
-                                            "file2": {
-                                              "name": "file2",
+                                            "file_thread5_2": {
+                                              "name": "file_thread5_2",
                                               "mem_locations": [],
                                               "size": 0,
                                               "mode": "w"
@@ -40,26 +40,26 @@
                                     }
                                   ],
                                   "data": {
-                                    "path": "Root/dir_6",
-                                    "name": "dir_6",
+                                    "path": "Root/dir_4",
+                                    "name": "dir_4",
                                     "files_dict": {
-                                      "file_thread6": {
-                                        "name": "file_thread6",
+                                      "file_thread4": {
+                                        "name": "file_thread4",
                                         "mem_locations": [
                                           {
                                             "name": "block 10",
                                             "is_full": 1,
-                                            "f_name": "file_thread6",
+                                            "f_name": "file_thread4",
                                             "size": 20,
                                             "b_occupied": 20,
-                                            "fsize": 20
+                                            "fsize": 13
                                           }
                                         ],
-                                        "size": 20,
+                                        "size": 13,
                                         "mode": "w"
                                       },
-                                      "file_thread6_2": {
-                                        "name": "file_thread6_2",
+                                      "file_thread4_2": {
+                                        "name": "file_thread4_2",
                                         "mem_locations": [],
                                         "size": 0,
                                         "mode": "w"
@@ -70,31 +70,39 @@
                               }
                             ],
                             "data": {
-                              "path": "Root/dir_5",
-                              "name": "dir_5",
+                              "path": "Root/dir_6",
+                              "name": "dir_6",
                               "files_dict": {
-                                "file_thread5": {
-                                  "name": "file_thread5",
+                                "file_thread6": {
+                                  "name": "file_thread6",
                                   "mem_locations": [
+                                    {
+                                      "name": "block 7",
+                                      "is_full": 1,
+                                      "f_name": "file_thread6",
+                                      "size": 20,
+                                      "b_occupied": 20,
+                                      "fsize": 37
+                                    },
                                     {
                                       "name": "block 8",
                                       "is_full": 0,
-                                      "f_name": "file_thread5",
+                                      "f_name": "file_thread6",
                                       "size": 20,
-                                      "b_occupied": 13,
-                                      "fsize": 13
+                                      "b_occupied": 17,
+                                      "fsize": 37
                                     }
                                   ],
-                                  "size": 13,
+                                  "size": 37,
                                   "mode": "w"
                                 },
-                                "file_thread5_2": {
-                                  "name": "file_thread5_2",
+                                "file_thread6_2": {
+                                  "name": "file_thread6_2",
                                   "mem_locations": [
                                     {
                                       "name": "block 9",
                                       "is_full": 0,
-                                      "f_name": "file_thread5_2",
+                                      "f_name": "file_thread6_2",
                                       "size": 20,
                                       "b_occupied": 5,
                                       "fsize": 5
@@ -109,39 +117,31 @@
                         }
                       ],
                       "data": {
-                        "path": "Root/dir_4",
-                        "name": "dir_4",
+                        "path": "Root/dir_3",
+                        "name": "dir_3",
                         "files_dict": {
-                          "file_thread4": {
-                            "name": "file_thread4",
+                          "file_thread3": {
+                            "name": "file_thread3",
                             "mem_locations": [
                               {
                                 "name": "block 5",
                                 "is_full": 1,
-                                "f_name": "file_thread4",
+                                "f_name": "file_thread3",
                                 "size": 20,
                                 "b_occupied": 20,
-                                "fsize": 13
-                              },
-                              {
-                                "name": "block 7",
-                                "is_full": 0,
-                                "f_name": "file_thread4",
-                                "size": 20,
-                                "b_occupied": 2,
-                                "fsize": 0
+                                "fsize": 20
                               }
                             ],
-                            "size": 13,
+                            "size": 20,
                             "mode": "w"
                           },
-                          "file_thread4_2": {
-                            "name": "file_thread4_2",
+                          "file_thread3_2": {
+                            "name": "file_thread3_2",
                             "mem_locations": [
                               {
                                 "name": "block 6",
                                 "is_full": 0,
-                                "f_name": "file_thread4_2",
+                                "f_name": "file_thread3_2",
                                 "size": 20,
                                 "b_occupied": 5,
                                 "fsize": 5
@@ -156,8 +156,8 @@
                   }
                 ],
                 "data": {
-                  "path": "Root/dir1",
-                  "name": "dir1",
+                  "path": "Root/dir2",
+                  "name": "dir2",
                   "files_dict": {
                     "file1": {
                       "name": "file1",
@@ -167,11 +167,11 @@
                           "is_full": 0,
                           "f_name": "file1",
                           "size": 20,
-                          "b_occupied": 7,
-                          "fsize": 7
+                          "b_occupied": 9,
+                          "fsize": 9
                         }
                       ],
-                      "size": 7,
+                      "size": 9,
                       "mode": "w"
                     },
                     "file2": {
@@ -182,11 +182,11 @@
                           "is_full": 0,
                           "f_name": "file2",
                           "size": 20,
-                          "b_occupied": 3,
-                          "fsize": 3
+                          "b_occupied": 5,
+                          "fsize": 5
                         }
                       ],
-                      "size": 3,
+                      "size": 5,
                       "mode": "w"
                     }
                   }
@@ -195,37 +195,37 @@
             }
           ],
           "data": {
-            "path": "Root/dir_3",
-            "name": "dir_3",
+            "path": "Root/dir1",
+            "name": "dir1",
             "files_dict": {
-              "file_thread3": {
-                "name": "file_thread3",
+              "file1": {
+                "name": "file1",
                 "mem_locations": [
                   {
                     "name": "block 1",
-                    "is_full": 1,
-                    "f_name": "file_thread3",
+                    "is_full": 0,
+                    "f_name": "file1",
                     "size": 20,
-                    "b_occupied": 20,
-                    "fsize": 20
+                    "b_occupied": 7,
+                    "fsize": 7
                   }
                 ],
-                "size": 20,
+                "size": 7,
                 "mode": "w"
               },
-              "file_thread3_2": {
-                "name": "file_thread3_2",
+              "file2": {
+                "name": "file2",
                 "mem_locations": [
                   {
                     "name": "block 2",
                     "is_full": 0,
-                    "f_name": "file_thread3_2",
+                    "f_name": "file2",
                     "size": 20,
-                    "b_occupied": 5,
-                    "fsize": 5
+                    "b_occupied": 3,
+                    "fsize": 3
                   }
                 ],
-                "size": 5,
+                "size": 3,
                 "mode": "w"
               }
             }

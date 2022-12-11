@@ -17,8 +17,6 @@ class User_Thread (threading.Thread):
 
 #function to parse input file and process input from it
     def run(self):
-        print(f"Executing {self.name}")
-
         commands = self.thread_parser(self.input_file)  # list of commands
 
         with open(self.output_file, 'a') as fd:
@@ -37,12 +35,12 @@ class User_Thread (threading.Thread):
                     output = self.file_mgr.change_dir(dir_name)
 
                 elif inp == "delete_dir":
-                    string = input("Enter directory name: ")
+                    dir_name = args[1]
                     # for key, value in self.file_mgr.cwd.files_dict.items():
                     #     o_file = self.file_mgr.open_file(key, 'w')
                     #     o_file.truncate_file(o_file.size, self.mem_mgr)
-                    self.file_mgr.change_dir(string)
-                    output = self.file_mgr.delete_dir(string)
+                    self.file_mgr.change_dir(dir_name)
+                    output = self.file_mgr.delete_dir(dir_name)
 
                 elif inp == "create_file":
                     f_name = args[1]
